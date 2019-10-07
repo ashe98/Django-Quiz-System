@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title%}
+  Take Quiz
+{% endblock %}
+
+{% block content%}
+<h1>Select a Quiz</h1>
+
+	{% for qn in quizzes_names %}
+	  <div class="row">
+	    <div class="col-md-10">
+	      <a href="/quiz/{{qn.quiz_name}}"><h3>{{ forloop.counter }}. {{ qn.quiz_name }}</h3></a> 
+	    </div>
+	  </div>
+	  
+	{% endfor %}
+
+{% endblock %}

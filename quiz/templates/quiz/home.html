@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title%}
+  Home
+{% endblock %}
+
+{% block content %}
+  <h1 class="center">Welcome</h1>
+  <h2></h2>
+  
+  <div class="row">
+    <div class="col-md-4">
+      <a href="/quiz/create"><h3>Create Quiz</h3></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <a href="/quiz/takequiz"><h3>Take Quiz</h3></a> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <a href="/quiz/viewres"><h3>View Results</h3></a> 
+    </div>
+  </div>
+  <br/><br/>
+  <p>{{msg}}</p>
+{% endblock %}

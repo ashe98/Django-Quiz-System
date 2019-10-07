@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title%}
+  Result
+{% endblock %}
+
+{% block content%}
+
+	{% for s in soq%}
+	  <div class="row">
+	    <div class="col-md-10">
+	      <h3>{{ forloop.counter }}. {{ s.getusername }} {{ s.scoreofu }}</h3>
+	    </div>
+	  </div>
+	  
+	{% endfor %}
+
+{% endblock %}

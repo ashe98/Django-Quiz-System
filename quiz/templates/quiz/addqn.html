@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title%}
+Add Question
+{% endblock %}
+
+{% block content%}
+
+<form action="./addqn" method="post">
+	{% csrf_token %}
+  <div class="row">
+    <div class="col-md-10">
+    	Question<br/>
+    	<input type="text" name="question">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-10">
+      Option A<br/>
+      <input type="text" name="optiona">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-10">
+    	Option B<br/>
+    	<input type="text" name="optionb">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-10">
+      Option C<br/>
+      <input type="text" name="optionc">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-10">
+      Option D<br/>
+      <input type="text" name="optiond">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-10">
+      Answer<br/>
+      <input type="text" name="answer">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-10">
+      Marks<br/>
+      <input type="number" name="marks">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-xs-4">
+      <button type="submit" class="btn btn-block btn-success btn-md">Add Question</button>
+    </div>
+  </div>
+</form>
+<br/><br/>
+
+{% endblock %}

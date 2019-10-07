@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title%}
+Create Quiz
+{% endblock %}
+
+{% block content%}
+<br/><br/>
+<a href="/quiz/addqn.html"><button>Add a Question</button></a>
+<br/><br/><br/><br/>
+<form action="./create" method="post">
+	{% csrf_token %}
+  <div class="row">
+    <div class="col-md-10">
+    	Maximum Marks<br/>
+    	<input type="number" name="mm">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-10">
+    	Quiz Name<br/>
+    	<input type="text" name="quizname">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-xs-2">
+      <button type="submit" class="btn btn-block btn-success btn-md">Create Quiz</button>
+    </div>
+  </div>
+</form>
+<br/><br/>
+<p>{{error}}</p>
+
+{% endblock %}

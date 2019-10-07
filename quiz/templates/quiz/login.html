@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% block title%}
+Quiz : Login
+{% endblock %}
+
+{% block content%}
+
+<form action="." method="post">
+	{% csrf_token %}
+  <div class="row">
+    <div class="col-md-10">
+    	Username<br/>
+    	<input type="text" name="username">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-10">
+    	Password<br/>
+    	<input type="password" name="password">
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-xs-2">
+      <button type="submit" class="btn btn-block btn-success btn-md">Login</button>
+    </div>
+  </div>
+</form>
+<br/><br/>
+<p>{{error}}</p>
+
+{% endblock %}
